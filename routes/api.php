@@ -22,6 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/users', [UserController::class, 'store']);
 Route::get('/getproducts', [ProductController::class, 'index']);
-Route::post('/addproduct', [ProductController::class, 'store']); // Changed from 'create' to 'store'
-Route::patch('/editproduct/{product}', [ProductController::class, 'update']); // Added {product} parameter to the route
-Route::delete('/deleteproduct/{product}', [ProductController::class, 'destroy']); // Changed 'destory' to 'destroy' and added {product} parameter
+Route::post('/addproduct', [ProductController::class, 'store']);
+Route::patch('/editproduct/{product}', [ProductController::class, 'update']);
+Route::delete('/deleteproduct/{product}', [ProductController::class, 'destroy']);
